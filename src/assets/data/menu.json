@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Online Casinos",
+    "icon": "./assets/icons/casino-add-chip.svg",
+    "subMenuItems": [
+      { "label": "Top online casinos", "link": "#" },
+      { "label": "Newly opened casinos", "link": "#" },
+      { "label": "Big Brands", "link": "#" },
+      { "label": "All Casinos", "link": "#" }
+    ]
+  },
+  {
+    "label": "Bonuses",
+    "icon": "./assets/icons/casion-diamond-bounus.svg",
+    "subMenuItems": [
+      { "label": "No Deposit Bonuses", "link": "#" },
+      { "label": "Deposit Bonuses", "link": "#" },
+      { "label": "Reload Bonuses", "link": "#" },
+      { "label": "Cashback Bonuses", "link": "#" },
+      { "label": "All Bonuses", "link": "#" }
+    ]
+  },
+  {
+    "label": "Games",
+    "icon": "./assets/icons/board-game.svg",
+    "subMenuItems": [
+      { "label": "Web Design", "link": "#" },
+      { "label": "Login Form", "link": "#" },
+      { "label": "Card Design", "link": "#" }
+    ]
+  },
+  {
+    "label": "Blog",
+    "icon": "./assets/icons/blog-blogger.svg",
+    "subMenuItems": []
+  }
+]

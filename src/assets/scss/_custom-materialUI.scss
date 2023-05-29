@@ -1,0 +1,14 @@
+// compoent
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+mat-drawer {
+  width: 260px;
+  background-color: #0c1245 !important;
+}
+mat-drawer-container {
+  height: 100%;
+  background-color: #e5e5ee !important;
+}

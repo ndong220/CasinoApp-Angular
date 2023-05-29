@@ -1,0 +1,20 @@
+mat-toolbar {
+  background-color: #e5e5e5;
+}
+.title {
+  margin: 25px;
+  padding: 10px;
+  .title__text {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  .title__text--total {
+    color: #1E60E1;
+  }
+  .title__text--mobile {
+    display: none;
+  }
+}

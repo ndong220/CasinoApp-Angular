@@ -1,0 +1,22 @@
+// Remove margin and padding from all elements
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Set font-size and font-family for body
+
+// Override default list styles
+// ul, ol {
+//   list-style: none;
+// }
+
+// Set default hyperlink styles
+a {
+  text-decoration: none;
+  color: inherit;
+}
+strong {
+  color: #111111;
+}

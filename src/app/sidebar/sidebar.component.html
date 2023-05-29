@@ -1,0 +1,29 @@
+<mat-nav-list>
+  <div class="sidebar">
+    <div class="sidebar__logo">
+      <img src="./assets/img/logo-playunited.png" alt="logo" />
+    </div>
+    <ul class="sidebar__links nav-links">
+      <li *ngFor="let menuItem of menuItems; let i = index">
+        <div class="icon-link">
+          <a href="#">
+            <img src="{{ menuItem.icon }}" alt="" class="icon-link__img" />
+            <span class="icon-link__name">{{ menuItem.label }}</span>
+          </a>
+          <i class="bx arrow icon-link__icon" *ngIf="menuItem.subMenuItems.length > 0" (click)="toggleSubMenu(i)">
+            <mat-icon *ngIf="isSubMenuOpen[i]">keyboard_arrow_up</mat-icon>
+            <mat-icon *ngIf="!isSubMenuOpen[i]">keyboard_arrow_down</mat-icon>
+          </i>
+        </div>
+        <ul
+          class="sub-menu"
+          [class.show]="isSubMenuOpen[i]"
+        >
+          <li *ngFor="let subMenuItem of menuItem.subMenuItems">
+            <a href="{{ subMenuItem.link }}">{{ subMenuItem.label }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</mat-nav-list>

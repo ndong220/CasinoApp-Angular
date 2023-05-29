@@ -1,0 +1,17 @@
+<mat-tab-group>
+  <mat-tab class="tab-item" *ngFor="let item of items; let i = index" [label]="item.title">
+    <div class="tab__show" [ngClass]="{'fadeout': !item.expanded && item.content.length > 200, 'show-less': !item.expanded}" *ngIf="item.content.length > 45">
+      {{ item.content }}
+    </div>
+    <div class="tab__show" *ngIf="item.content.length <= 45">
+      {{ item.content }}
+    </div>
+    <div class="btn-show">
+      <button mat-button (click)="toggleExpanded(i)" *ngIf="item.content.length > 200">
+        {{ item.expanded ? 'Show less' : 'Show more' }}
+        <mat-icon>{{ item.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+    </div>
+    <div class="no-data" *ngIf="!item.content">Không có dữ liệu</div>
+  </mat-tab>
+</mat-tab-group>
