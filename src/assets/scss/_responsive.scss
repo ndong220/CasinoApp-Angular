@@ -1,4 +1,6 @@
 @import "./variables";
+@import "./custom-fonts.scss";
+@import "./custom-materialUI";
 
 @media only screen and #{$media-screen-tablet} {
   .toolbar {
@@ -13,7 +15,7 @@
       }
     }
     .breadcrumbs {
-      display: none;
+      display: none !important;
     }
     .home-header {
       .home-header__icons {
@@ -23,6 +25,7 @@
         }
         .home-content__search {
           color: $white !important;
+          cursor: pointer;
         }
       }
     }
@@ -81,6 +84,11 @@
     .perfect,
     .alert {
       display: none !important;
+    }
+    .dealer__content-header {
+      .featured-right {
+        margin-right: 0 !important;
+      }
     }
     .dealer__content-body {
       .start-header {
@@ -156,7 +164,7 @@
   margin: 20px 20px !important;
   .description__menu {
     justify-content: flex-start;
-    top: 50px !important;
+    top: 40px !important;
     .menu-box {
       max-width: 100% !important;
       width: 100% !important;
@@ -203,7 +211,6 @@
         height: 35px;
       }
       .material-icons {
-        font-size: 35px !important;
         line-height: 1.2 !important;
       }
       button {
@@ -218,7 +225,7 @@
       }
     }
     .breadcrumbs {
-      display: none;
+      display: none !important;
     }
     .home-header {
       .home-header__icons {
@@ -273,9 +280,6 @@
   .mat-mdc-tab-header-pagination {
     display: none !important;
   }
-  // .tab__show {
-  //   margin-right: 20px !important;
-  // }
   .mat-mdc-tab-labels {
     margin-left: 0;
   }
@@ -299,99 +303,96 @@
    .dealer {
     margin: 0 12px 20px !important;
     justify-content: center !important;
+    .dealer__background {
+      display: none;
   }
-  .dunder , .unibet , .dafabet {
 
-      .dealer__background {
-          display: none;
+  .dealer__content {
+      // max-width: 351px;
+      width: 100%;
+      .dunder-title  {
+          font-size: 20px !important;
+          display: flex;
+          gap: 5px;
+          padding-left: 0 !important;
+          color: $textColor !important;
+          img {
+            display: block !important;
+          }
+
+          .dunder__content-img {
+            width: 39px;
+            height: 39px;
+            border-radius: 6px;
+          }
+
       }
-
-      .dealer__content {
-          // max-width: 351px;
-          width: 100%;
-          .dunder-title ,.unibet-title ,.dafabet-title ,.happistar-title {
-              font-size: 20px !important;
-              display: flex;
-              gap: 5px;
-              padding-left: 0 !important;
-              img {
-                display: block !important;
-              }
-              .title-mobile {
-                display: block !important;
-                font-family: "Oswald",sans-serif;
-                font-weight: 700;
-                font-size: 20px;
-                text-transform: uppercase;
-                color: $textColor !important;
-              }
-
+      .ratting {
+        display: flex !important;
+      }
+      .dealer__content-header {
+          border: none !important;
+          padding: 0 12px;
+          .featured-right {
+              display: none !important;
           }
-          .ratting {
-            display: flex !important;
+          .dunder-right {
+            margin: 10px 0 5px 0 !important;
           }
-          .dealer__content-header {
-              border: none !important;
-              padding: 0 12px;
-              .featured-right {
+
+      }
+      .dealer__content-body {
+          flex-direction: column !important;
+          .body__country {
+            padding: 16px 12px !important;
+          }
+          .body__desc {
+              display: none;
+          }
+          .body__gift {
+              max-width: 327px !important;
+              width: 100% !important;
+              margin: 0 auto !important;
+              position: relative !important;
+              .gift-box {
                   display: none !important;
               }
-              .dunder-right {
-                margin: 10px 0 5px 0 !important;
+              .sale-box {
+                  border-radius: 12px 0px !important;
+                  left: -2px !important;
               }
-
-          }
-          .dealer__content-body {
-              flex-direction: column !important;
-              .body__country {
-                padding: 16px 12px !important;
-              }
-              .body__desc {
-                  display: none;
-              }
-              .body__gift {
-                  max-width: 327px !important;
-                  width: 100% !important;
-                  margin: 0 auto !important;
-                  position: relative !important;
-                  .gift-box {
-                      display: none !important;
-                  }
-                  .sale-box {
-                      border-radius: 12px 0px !important;
-                      left: -2px !important;
-                  }
-                  .apply {
-                      position: absolute;
-                      top: -17px;
-                      left: 70%;
-                  }
+              .apply {
+                  position: absolute;
+                  top: -17px;
+                  left: 70%;
               }
           }
-
-          .dealer__content_footer {
-            .less-details {
-              display: flex;
-              line-height: 1;
-              align-items: center;
-              justify-content: center;
-            }
-              padding-right: 12px;
-              padding-left: 12px !important;
-              .visit-casino::before {
-                content: "Visit" !important;
-            }
-            .visit-casino::after {
-                content: " ";
-                display: inline-block;
-            }
-            .details {
-              display: none !important;
-            }
-          }
-
       }
+
+      .dealer__content_footer {
+        .less-details {
+          display: flex;
+          line-height: 1;
+          align-items: center;
+          justify-content: center;
+        }
+          padding-right: 12px;
+          padding-left: 12px !important;
+          .visit-casino::before {
+            content: "Visit" !important;
+        }
+        .visit-casino::after {
+            content: " ";
+            display: inline-block;
+        }
+        .details {
+          display: none !important;
+        }
+      }
+
   }
+  }
+
   .happistar {
     display: none !important;
   }
@@ -409,11 +410,11 @@
   gap: 12px;
   align-items: inherit !important;
   margin: 20px 12px !important;
-  .pagination__page-index {
-      text-align: center;
+  .navigation__page {
+    display: none !important;
   }
-  .pagination__pagesize {
-      display: none !important;
+  .pagination__page-index {
+      display: none;
   }
   .pagination__btn {
       display: flex !important;

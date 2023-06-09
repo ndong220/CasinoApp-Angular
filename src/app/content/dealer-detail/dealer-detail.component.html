@@ -1,0 +1,38 @@
+
+<mat-card>
+  <h1 class="title-detail">Detail Casino</h1>
+  <mat-card-header>
+    <div mat-card-avatar class="dealer-logo">
+      <img [src]="dealer.logo" alt="Dealer Logo">
+    </div>
+    <mat-card-title>{{ dealer.name  | uppercase }}</mat-card-title>
+    <mat-card-subtitle>Evaluate: {{ dealer.Evaluate }}/10</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="dealer-exclusive">
+      <h3 class="exclusive-label">Exclusive Bonus:</h3>
+      <p class="exclusive-value">{{ dealer.exclusive }}</p>
+    </div>
+    <div class="dealer-bonus">
+      <h3 class="bonus-label">Bonus Details:</h3>
+      <ul class="bonus-list">
+        <li>Maximum First Deposit Bonus: up to {{ dealer.bonus.maxDeposit }}</li>
+        <li>Bonus Match: {{ dealer.bonus.match }} match on first deposit</li>
+        <li>Minimum Deposit Amount: {{ dealer.bonus.minDeposit }}</li>
+        <li>Wager Requirement: {{ dealer.bonus.wagerReq }} Times</li>
+        <li>Bonus Excluded in Wager Requirement: {{ dealer.bonus.excludeBonus ? 'Yes' : 'No' }}</li>
+        <li>No Deposit Bonus: {{ dealer.bonus.noDeposit }} Free Spins</li>
+      </ul>
+    </div>
+    <div class="dealer-why-play">
+      <h3 class="why-play-label">Why Play Here:</h3>
+      <ul class="why-play-list">
+        <li *ngFor="let reason of dealer.whyPlay">{{ reason }}</li>
+      </ul>
+    </div>
+  </mat-card-content>
+  <mat-card-footer class="mb-2 mt-4">
+    <button mat-button class="close-button" (click)="close()">Close<mat-icon>close</mat-icon></button>
+  </mat-card-footer>
+</mat-card>
+

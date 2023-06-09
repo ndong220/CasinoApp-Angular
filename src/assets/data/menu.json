@@ -1,37 +1,593 @@
-[
-  {
-    "label": "Online Casinos",
-    "icon": "./assets/icons/casino-add-chip.svg",
-    "subMenuItems": [
-      { "label": "Top online casinos", "link": "#" },
-      { "label": "Newly opened casinos", "link": "#" },
-      { "label": "Big Brands", "link": "#" },
-      { "label": "All Casinos", "link": "#" }
-    ]
-  },
-  {
-    "label": "Bonuses",
-    "icon": "./assets/icons/casion-diamond-bounus.svg",
-    "subMenuItems": [
-      { "label": "No Deposit Bonuses", "link": "#" },
-      { "label": "Deposit Bonuses", "link": "#" },
-      { "label": "Reload Bonuses", "link": "#" },
-      { "label": "Cashback Bonuses", "link": "#" },
-      { "label": "All Bonuses", "link": "#" }
-    ]
-  },
-  {
-    "label": "Games",
-    "icon": "./assets/icons/board-game.svg",
-    "subMenuItems": [
-      { "label": "Web Design", "link": "#" },
-      { "label": "Login Form", "link": "#" },
-      { "label": "Card Design", "link": "#" }
-    ]
-  },
-  {
-    "label": "Blog",
-    "icon": "./assets/icons/blog-blogger.svg",
-    "subMenuItems": []
+{
+  "menuItems": [
+    {
+      "label": "Online Casinos",
+      "icon": "./assets/icons/casino-add-chip.svg",
+      "subMenuItems": [
+        {
+          "label": "Top online casinos",
+          "link": "content"
+        },
+        {
+          "label": "Newly opened casinos",
+          "link": "#"
+        },
+        {
+          "label": "Big Brands",
+          "link": "#"
+        },
+        {
+          "label": "All Casinos",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "label": "Bonuses",
+      "icon": "./assets/icons/casion-diamond-bounus.svg",
+      "subMenuItems": [
+        {
+          "label": "No Deposit Bonuses",
+          "link": "#"
+        },
+        {
+          "label": "Deposit Bonuses",
+          "link": "#"
+        },
+        {
+          "label": "Reload Bonuses",
+          "link": "#"
+        },
+        {
+          "label": "Cashback Bonuses",
+          "link": "#"
+        },
+        {
+          "label": "All Bonuses",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "label": "Games",
+      "icon": "./assets/icons/board-game.svg",
+      "subMenuItems": [
+        {
+          "label": "Web Design",
+          "link": "#"
+        },
+        {
+          "label": "Login Form",
+          "link": "#"
+        },
+        {
+          "label": "Card Design",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "label": "Blog",
+      "icon": "./assets/icons/blog-blogger.svg",
+      "subMenuItems": []
+    }
+  ],
+  "tabs": [
+    {
+      "title": "Recommended (342)",
+      "content": "We've thoroughly reviewed Wazamba Casino and gave it a good reputation rating. It's generally a good casino to play at, but there are some things worth noting. In our review, we've considered the casino's player complaints, estimated revenues, license, games genuineness, customer support quality, fairness of terms and conditions, withdrawal and win limits, and other factors. Because Wazamba Casino is related to other online casinos listed below, its rating is also influenced by them. Read"
+    },
+    {
+      "title": "Big Brands (132)",
+      "content": "We've thoroughly reviewed Wazamba Casino and gave it a good reputation rating. It's generally a good casino to play at, but there are some things worth noting. In our review, we've considered the casino's player complaints, estimated revenues, license, games genuineness, customer support quality, fairness of terms and conditions, withdrawal and win limits, and other factors. Because Wazamba Casino is related to other online casinos listed below, its rating is also influenced by them. Read"
+    },
+    {
+      "title": "Newly Opened (193)",
+      "content": "We've thoroughly reviewed Wazamba Casino. We've thoroughly reviewed Wazamba Casino. We've thoroughly reviewed Wazamba Casino. We've thoroughly reviewed Wazamba Casino."
+    },
+    {
+      "title": "All (1982)",
+      "content": ""
+    }
+  ],
+  "dealers": [
+    {
+      "id": 0,
+      "logo": "./assets/img/live-casin-house.png",
+      "color": "#161735",
+      "name": "dunder CASINO",
+      "stt": 1,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 1,
+      "logo": "./assets/img/unibet.png",
+      "color": "#147B44",
+      "name": "Unibet Casino",
+      "stt": 2,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 2,
+      "logo": "./assets/img/dafabet.png",
+      "color": "#AE0001",
+      "name": "dafabet",
+      "stt": 3,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 3,
+      "logo": "./assets/img/happiStart.png",
+      "color": "#2A385B",
+      "name": "happistar",
+      "stt": 4,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 4,
+      "logo": "./assets/img/live-casin-house.png",
+      "color": "#161735",
+      "name": "dunder CASINO",
+      "stt": 5,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 5,
+      "logo": "./assets/img/unibet.png",
+      "color": "#147B44",
+      "name": "Unibet Casino",
+      "stt": 6,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 6,
+      "logo": "./assets/img/dafabet.png",
+      "color": "#AE0001",
+      "name": "dafabet",
+      "stt": 7,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 7,
+      "logo": "./assets/img/happiStart.png",
+      "color": "#2A385B",
+      "name": "happistar",
+      "stt": 8,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 8,
+      "logo": "./assets/img/live-casin-house.png",
+      "color": "#161735",
+      "name": "dunder CASINO",
+      "stt": 9,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 9,
+      "logo": "./assets/img/unibet.png",
+      "color": "#147B44",
+      "name": "Unibet Casino",
+      "stt": 10,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 10,
+      "logo": "./assets/img/dafabet.png",
+      "color": "#AE0001",
+      "name": "dafabet",
+      "stt": 11,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 11,
+      "logo": "./assets/img/happiStart.png",
+      "color": "#2A385B",
+      "name": "happistar",
+      "stt": 12,
+      "Featured": true,
+      "Evaluate": 9.33,
+      "PERFECT": true,
+      "Reputation": true,
+      "criteria": {
+        "playersFrom": true,
+        "englishWeb": true,
+        "englishSupport": true,
+        "liveChat": false,
+        "providers": 34,
+        "paymentMethod": 12,
+        "gameLicense": 1,
+        "vpn": false
+      },
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ],
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      }
+    },
+    {
+      "id": 12,
+      "stt": "13",
+      "logo": "./assets/img/happiStart.png",
+      "name": "DUNDER CASINO",
+      "color": "#161735",
+      "Evaluate": "9.23",
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      },
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ]
+    },
+    {
+      "id": 13,
+      "stt": 23,
+      "logo": "./assets/img/happiStart.png",
+      "name": "HAPPY START",
+      "color": "#161735",
+      "Evaluate": "9.3",
+      "exclusive": "121% up to $500 and 200 extra spins",
+      "bonus": {
+        "maxDeposit": "$50",
+        "match": "200%",
+        "minDeposit": "$20",
+        "wagerReq": "25",
+        "excludeBonus": false,
+        "noDeposit": "+$20"
+      },
+      "whyPlay": [
+        "Large selection of games from multiple suppliers",
+        "Mobile & live casino supported",
+        "24/7 support via live chat and email",
+        "Licensed in UK",
+        "Large online progressive slots"
+      ]
+    }
+  ],
+  "pagination": {
+    "currentPage": 1,
+    "pageSize": 4,
+    "totalItems": 4,
+    "totalPages": 1
   }
-]
+}

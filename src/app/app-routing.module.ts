@@ -1,12 +1,12 @@
 import { ContentComponent } from './content/content.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { DealerDetailComponent } from './content/dealer-detail/dealer-detail.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home' , component:HomeComponent},
   {path: 'content', component:ContentComponent},
+  {path: 'dealer/:id', component: DealerDetailComponent }
 ];
 
 @NgModule({

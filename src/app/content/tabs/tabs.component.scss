@@ -1,46 +1,4 @@
 
-.mdc-tab {
-  font-family: 'Oswald';
-  background-color: #fff;
-   padding: 16px 20px 11px 20px;
-   margin-right: 10px;
-   font-weight: 700;
-   font-size: 17px;
-   text-align: center;
-   color:#111111;
-   border-radius: 6px 6px 0 0;
-   border-bottom: 5px solid transparent;
-   cursor: pointer;
-   transition: all 0.5s ease;
-}
-.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header .mat-mdc-tab {
-  flex-grow: 0 !important;
-}
-.mat-mdc-tab-labels {
-  gap: 10px;
-  margin-left: 50px;
-}
-.mat-mdc-tab-body-content {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.mdc-tab-indicator--active {
-  opacity: 1;
-  background-color: #1E60E1;
-  border-bottom: #1E60E1;
-  .mdc-tab__text-label {
-    color: #ffffff !important;
-  }
-}
-.mat-mdc-tab .mdc-tab__text-label, .mat-mdc-tab-link .mdc-tab__text-label
- {
-  color: #111111;
- }
-
-.mat-mdc-tab-list {
-  border-bottom: 3px solid #1E60E1;
-}
-
 .fadeout {
   position: relative;
 
@@ -54,7 +12,6 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #e5e5e5);
   }
 }
-
 .tab__show.show-less {
   height: 50px;
   overflow: hidden;

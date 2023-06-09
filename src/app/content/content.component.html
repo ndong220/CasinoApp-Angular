@@ -1,4 +1,3 @@
-
 <app-tabs></app-tabs>
 <!-- fillter -->
 <div class="filter">
@@ -9,9 +8,7 @@
     </div>
     <div class="filter__game">
       Casino Games:
-      <span class="filter__tag"
-        >Slots <i class="fa-solid fa-xmark"></i
-      ></span>
+      <span class="filter__tag">Slots <i class="fa-solid fa-xmark"></i></span>
     </div>
     <div class="filter__reset-btn">Reset filters</div>
   </div>
@@ -28,8 +25,8 @@
 <div class="shows">
   <div class="show__casino">
     <p class="show__text">
-      Showing casinos: Accepting players from Greece with Reputation
-      rating above 7.5
+      Showing casinos: Accepting players from Greece with Reputation rating
+      above 7.5
     </p>
   </div>
   <div class="show__sort">
@@ -38,140 +35,36 @@
     </button>
   </div>
 </div>
+
 <!-- end showing casino -->
 
-<!-- mat-card dunder -->
-<mat-card class="dealer dunder">
-  <div class="dealer__background dealer--black">
-    <img mat-card-image src="./assets/img/live-casin-house.png" alt="img">
+<!-- dealer -->
+<mat-card class="dealer dunder" *ngFor="let dealer of pagedDealers">
+  <div
+    class="dealer__background"
+    [ngStyle]="{ 'background-color': dealer.color }"
+  >
+    <img mat-card-image src="{{ dealer.logo }}" alt="img" />
   </div>
   <mat-card-content class="dealer__content">
     <div class="dealer__content-header">
-      <div class="dunder-title">
-        <img class="dunder__content-img" src="./assets/img/small-casino.png" alt="img">
-        <span>#1</span> - {{'dunder CASINO' | uppercase}}
+      <div class="dunder-title"  [routerLink]="['/dealer', dealer.id]">
+
+          <img class="dunder__content-img" src="{{ dealer.logo }}" alt="img" />
+          <span>#{{ dealer.stt }}</span> - {{ dealer.name | uppercase }}
+
       </div>
       <img src="./assets/icons/star-yellow.svg" alt="" class="ratting" />
       <div class="dunder-right">
         <button mat-flat-button color="accent" class="featured-right">
-          <img src="./assets/icons/star-ratting.svg" alt="">
+          <img src="./assets/icons/star-ratting.svg" alt="" />
           Featured
         </button>
         <button mat-flat-button color="primary" class="number-right">
-          <img  src="./assets/icons/ribon.svg" alt="">9.33/10
+          <img src="./assets/icons/ribon.svg" alt="" />{{ dealer.Evaluate }}/10
         </button>
         <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-        &nbsp;<img src="./assets/icons/alert.svg" alt=""  class="alert"/>
-      </div>
-    </div>
-
-    <div class="dealer__content-body">
-      <div class="body__country">
-          <div class="start-header">
-            <button mat-flat-button color="primary" class="number-right">
-              <img src="./assets/icons/ribon.svg" alt="">9.33/10
-            </button>
-            <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-            &nbsp;<img src="./assets/icons/alert.svg" alt=""  class="alert"/>
-          </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/VietNam.svg" alt=""> Players from Greece
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt=""> English website
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt="">English customer support
-        </div>
-        <div class="country">
-          <img src="./assets/icons/small-remove.svg" alt="">
-          <img src="./assets/icons/live-chat.svg" alt=""> Live chat
-        </div>
-      </div>
-      <div class="body__desc">
-        <ul>
-          <li>34 Game Providers</li>
-          <li>12 Payment Methods</li>
-          <li>Gaming License</li>
-          <li>VPN Not Allowed</li>
-        </ul>
-      </div>
-      <div class="body__gift ">
-        <div class="gift-box">
-          <img src="./assets/icons/gift-box.svg" alt="">
-        </div>
-        <div class="sale-box">Exclusive</div>
-        <p>121% up to $500 and 200 extra spins</p>
-        <div class="apply">T&amp;C&rsquo;s Apply</div>
-      </div>
-    </div>
-
-    <mat-card-actions class="dealer__content_footer">
-      <button mat-button color="primary"class="visit-casino"></button>
-      <button mat-button color="accent" class="visit-review">Review</button>
-      <button mat-button color="warn" (click)="showMore1 = !showMore1" class="less-details">
-        {{ showMore1 ? 'Less' : 'More' }} <span class=" details">&nbsp;Details</span>
-        <mat-icon *ngIf="!showMore1">keyboard_arrow_down</mat-icon>
-        <mat-icon *ngIf="showMore1">keyboard_arrow_up</mat-icon>
-    </button>
-
-    </mat-card-actions>
-
-    <div class="dealer__content-hidden" *ngIf="showMore1">
-      <div class="left-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/iicon.svg" alt=""> Why play here?
-        </p>
-        <ul>
-          <li>Large selection of games from multiple suppliers</li>
-          <li>Mobile &amp; live casino supported</li>
-          <li>24/7 support via live chat and email</li>
-          <li>Licensed in UK</li>
-          <li>Large online progressive slots</li>
-        </ul>
-      </div>
-      <div class="right-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/giftblue.svg" alt=""> Bonus Details
-        </p>
-        <ul>
-          <li>Maximum First Deposit Bonus: up to $50</li>
-          <li>Bonus Match: 200% match on first deposit</li>
-          <li>Minimum Deposit Amount: $20</li>
-          <li>Wager Requirement: 25 Times</li>
-          <li>Bonus Excluded in Wager Requirement: No</li>
-          <li>No Deposit Bonus: +$20 Free Spins</li>
-        </ul>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-<!-- unibet -->
-<mat-card class="dealer unibet">
-  <div class="dealer__background dealer--green">
-    <img mat-card-image src="./assets/img/unibet.png" alt="img">
-  </div>
-  <mat-card-content class="dealer__content">
-    <div class="dealer__content-header">
-      <div class="unibet-title">
-        <img class="dunder__content-img" src="./assets/img/small-unibet.png" alt="img">
-        <span>#2</span> - {{'Unibet Casino' | uppercase}}
-      </div>
-      <img src="./assets/icons/star-yellow.svg" alt="" class="ratting" />
-      <div class="dunder-right">
-        <button mat-flat-button color="accent" class="featured-right">
-          <img  src="./assets/icons/star-ratting.svg" alt="">
-          Featured
-        </button>
-        <button mat-flat-button color="primary" class="number-right">
-          <img  src="./assets/icons/ribon.svg" alt="">9.33/10
-        </button>
-        <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-        &nbsp;<img src="./assets/icons/alert.svg" alt="" />
+        &nbsp;<img src="./assets/icons/alert.svg" alt="" class="alert" />
       </div>
     </div>
 
@@ -179,248 +72,29 @@
       <div class="body__country">
         <div class="start-header">
           <button mat-flat-button color="primary" class="number-right">
-            <img  src="./assets/icons/ribon.svg" alt="">9.33/10
+            <img src="./assets/icons/ribon.svg" alt="" />{{
+              dealer.Evaluate
+            }}/10
           </button>
           <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-          &nbsp;<img src="./assets/icons/alert.svg" alt=""  class="alert"/>
+          &nbsp;<img src="./assets/icons/alert.svg" alt="" class="alert" />
         </div>
         <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/VietNam.svg" alt=""> Players from Greece
+          <img src="./assets/icons/check-sticker.svg" alt="" />
+          <img src="./assets/icons/VietNam.svg" alt="" /> Players from Greece
         </div>
         <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt=""> English website
+          <img src="./assets/icons/check-sticker.svg" alt="" />
+          <img src="./assets/icons/USA-larg.svg" alt="" /> English website
         </div>
         <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt="">English customer support
+          <img src="./assets/icons/check-sticker.svg" alt="" />
+          <img src="./assets/icons/USA-larg.svg" alt="" />English customer
+          support
         </div>
         <div class="country">
-          <img src="./assets/icons/small-remove.svg" alt="">
-          <img src="./assets/icons/live-chat.svg" alt=""> Live chat
-        </div>
-      </div>
-      <div class="body__desc">
-        <ul>
-          <li>34 Game Providers</li>
-          <li>12 Payment Methods</li>
-          <li>Gaming License</li>
-          <li>VPN Not Allowed</li>
-        </ul>
-      </div>
-      <div class="body__gift gift__color-yellow">
-        <div class="gift-box">
-          <img src="./assets/icons/gift-box.svg" alt="">
-        </div>
-        <div class="sale-box">Bonus</div>
-        <p>121% up to $500 and 200 extra spins</p>
-        <div class="apply">T&C's Apply</div>
-      </div>
-    </div>
-
-    <mat-card-actions class="dealer__content_footer">
-      <button mat-button color="primary"class="visit-casino"></button>
-      <button mat-button color="accent" class="visit-review">Review</button>
-      <button mat-button color="warn" (click)="showMore2 = !showMore2" class="less-details">
-        {{ showMore2 ? 'Less' : 'More' }} <span class="details">&nbsp;Details</span>
-        <mat-icon *ngIf="!showMore2">keyboard_arrow_down</mat-icon>
-        <mat-icon *ngIf="showMore2">keyboard_arrow_up</mat-icon>
-    </button>
-
-    </mat-card-actions>
-
-    <div class="dealer__content-hidden" *ngIf="showMore2">
-      <div class="left-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/iicon.svg" alt=""> Why play here?
-        </p>
-        <ul>
-          <li>Large selection of games from multiple suppliers</li>
-          <li>Mobile &amp; live casino supported</li>
-          <li>24/7 support via live chat and email</li>
-          <li>Licensed in UK</li>
-          <li>Large online progressive slots</li>
-        </ul>
-      </div>
-      <div class="right-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/giftblue.svg" alt=""> Bonus Details
-        </p>
-        <ul>
-          <li>Maximum First Deposit Bonus: up to $50</li>
-          <li>Bonus Match: 200% match on first deposit</li>
-          <li>Minimum Deposit Amount: $20</li>
-          <li>Wager Requirement: 25 Times</li>
-          <li>Bonus Excluded in Wager Requirement: No</li>
-          <li>No Deposit Bonus: +$20 Free Spins</li>
-        </ul>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-<!-- dafabet -->
-<mat-card class="dealer dafabet">
-  <div class="dealer__background dealer--red">
-    <img mat-card-image src="./assets/img/dafabet.png" alt="img">
-  </div>
-  <mat-card-content class="dealer__content">
-    <div class="dealer__content-header">
-      <div class="dafabet-title">
-        <img src="./assets/img/small-dafabet.png" alt="img" />
-        <span>#3</span> - {{'dafabet' | uppercase}} <span class="title-mobile">casino</span>
-      </div>
-      <img src="./assets/icons/star-yellow.svg" alt="" class="ratting" />
-      <div class="dunder-right">
-        <button mat-flat-button color="accent" class="featured-right">
-          <img src="./assets/icons/star-ratting.svg" alt="">
-          Featured
-        </button>
-        <button mat-flat-button color="primary" class="number-right">
-          <img  src="./assets/icons/ribon.svg" alt="">9.33/10
-        </button>
-        <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-        &nbsp;<img src="./assets/icons/alert.svg" alt=""  />
-      </div>
-    </div>
-
-    <div class="dealer__content-body">
-      <div class="body__country">
-        <div class="start-header">
-          <button mat-flat-button color="primary" class="number-right">
-            <img  src="./assets/icons/ribon.svg" alt="">9.33/10
-          </button>
-          <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-          &nbsp;<img src="./assets/icons/alert.svg" alt=""  class="alert"/>
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/VietNam.svg" alt=""> Players from Greece
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt=""> English website
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt="">English customer support
-        </div>
-        <div class="country">
-          <img src="./assets/icons/small-remove.svg" alt="">
-          <img src="./assets/icons/live-chat.svg" alt=""> Live chat
-        </div>
-      </div>
-      <div class="body__desc">
-        <ul>
-          <li>34 Game Providers</li>
-          <li>12 Payment Methods</li>
-          <li>Gaming License</li>
-          <li>VPN Not Allowed</li>
-        </ul>
-      </div>
-      <div class="body__gift gift__color-yellow">
-        <div class="gift-box">
-          <img src="./assets/icons/gift-box.svg" alt="" />
-        </div>
-        <div class="sale-box">Bonus</div>
-        <p>121% up to $500 and 200 extra spins</p>
-        <div class="apply">T&'s Apply</div>
-      </div>
-    </div>
-
-    <mat-card-actions class="dealer__content_footer">
-      <button mat-button color="primary"class="visit-casino"></button>
-      <button mat-button color="accent" class="visit-review">Review</button>
-      <button mat-button color="warn" (click)="showMore3 = !showMore3" class="less-details">
-        {{ showMore3 ? 'Less' : 'More' }} <span class=" details">&nbsp;Details</span>
-        <mat-icon *ngIf="!showMore3">keyboard_arrow_down</mat-icon>
-        <mat-icon *ngIf="showMore3">keyboard_arrow_up</mat-icon>
-    </button>
-
-    </mat-card-actions>
-
-    <div class="dealer__content-hidden" *ngIf="showMore3">
-      <div class="left-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/iicon.svg" alt=""> Why play here?
-        </p>
-        <ul>
-          <li>Large selection of games from multiple suppliers</li>
-          <li>Mobile &amp; live casino supported</li>
-          <li>24/7 support via live chat and email</li>
-          <li>Licensed in UK</li>
-          <li>Large online progressive slots</li>
-        </ul>
-      </div>
-      <div class="right-desc">
-        <p>
-          <img class="title-hidden" src="./assets/icons/giftblue.svg" alt=""> Bonus Details
-        </p>
-        <ul>
-          <li>Maximum First Deposit Bonus: up to $50</li>
-          <li>Bonus Match: 200% match on first deposit</li>
-          <li>Minimum Deposit Amount: $20</li>
-          <li>Wager Requirement: 25 Times</li>
-          <li>Bonus Excluded in Wager Requirement: No</li>
-          <li>No Deposit Bonus: +$20 Free Spins</li>
-        </ul>
-      </div>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-<!-- happy star -->
-
-<mat-card class="dealer happistar">
-  <div class="dealer__background dealer--blue">
-    <img mat-card-image src="./assets/img/happiStart.png" alt="img">
-  </div>
-  <mat-card-content class="dealer__content">
-    <div class="dealer__content-header">
-      <div class="happistar-title">
-        <img class="dunder__content-img" src="/src/assets/img/happiStart.png" alt="img">
-        <span>#4</span> - {{'happistar' | uppercase}}
-      </div>
-      <mat-icon color="primary" class="ratting">star</mat-icon>
-      <div class="dunder-right">
-
-        <button mat-flat-button color="accent" class="featured-right">
-          <img  src="./assets/icons/star-ratting.svg" alt="">
-          Featured
-        </button>
-        <button mat-flat-button color="primary" class="number-right">
-          <img  src="./assets/icons/ribon.svg" alt="">9.33/10
-        </button>
-        <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-        &nbsp;<img src="./assets/icons/alert.svg" alt=""   />
-      </div>
-    </div>
-
-    <div class="dealer__content-body">
-      <div class="body__country">
-        <div class="start-header">
-          <button mat-flat-button color="primary" class="number-right">
-            <img  src="./assets/icons/ribon.svg" alt="">9.33/10
-          </button>
-          <div class="perfect"><span>PERFECT</span>&nbsp;Reputation</div>
-          &nbsp;<img src="./assets/icons/alert.svg" alt=""  class="alert"/>
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/VietNam.svg" alt=""> Players from Greece
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt=""> English website
-        </div>
-        <div class="country">
-          <img src="./assets/icons/check-sticker.svg" alt="">
-          <img src="./assets/icons/USA-larg.svg" alt="">English customer support
-        </div>
-        <div class="country">
-          <img src="./assets/icons/small-remove.svg" alt="">
-          <img src="./assets/icons/live-chat.svg" alt=""> Live chat
+          <img src="./assets/icons/small-remove.svg" alt="" />
+          <img src="./assets/icons/live-chat.svg" alt="" /> Live chat
         </div>
       </div>
       <div class="body__desc">
@@ -437,101 +111,266 @@
         </div>
         <div class="sale-box">Bonus</div>
         <p>
-          121% up to $500 and 200 extra spins, On Game Reel and other
-          games
+          {{ dealer.exclusive }}
         </p>
         <div class="apply">T&C’s Apply</div>
       </div>
     </div>
 
     <mat-card-actions class="dealer__content_footer">
-      <button mat-button color="primary"class="visit-casino"></button>
-      <button mat-button color="accent" class="visit-review">Review</button>
-      <button mat-button color="warn" (click)="showMore4 = !showMore4" class="less-details">
-        {{ showMore4 ? 'Less' : 'More' }} <span class="details">&nbsp;Details</span>
-        <mat-icon *ngIf="!showMore4">keyboard_arrow_down</mat-icon>
-        <mat-icon *ngIf="showMore4">keyboard_arrow_up</mat-icon>
-    </button>
-
+      <button mat-button color="primary" class="visit-casino" (click)="openEditForm(dealer)"></button>
+      <button
+        mat-button
+        color="accent"
+        class="visit-review"
+        (click)="openReviewForm(dealer.id)"
+      >
+        Review
+      </button>
+      <button
+        mat-button
+        color="warn"
+        (click)="dealer.showMore = !dealer.showMore"
+        class="less-details"
+      >
+        {{ dealer.showMore ? "Less" : "More" }}
+        <span class="details">&nbsp;Details</span>&nbsp;
+        <i class="fa-solid fa-chevron-down" *ngIf="!dealer.showMore"></i>
+        <i class="fa-solid fa-chevron-up" *ngIf="dealer.showMore"></i>
+      </button>
     </mat-card-actions>
 
-    <div class="dealer__content-hidden" *ngIf="showMore4">
+    <div class="dealer__content-hidden" *ngIf="dealer.showMore">
       <div class="left-desc">
         <p>
-          <img class="title-hidden" src="./assets/icons/iicon.svg" alt=""> Why play here?
+          <img class="title-hidden" src="./assets/icons/iicon.svg" alt="" /> Why
+          play here?
         </p>
         <ul>
-          <li>Large selection of games from multiple suppliers</li>
-          <li>Mobile &amp; live casino supported</li>
-          <li>24/7 support via live chat and email</li>
-          <li>Licensed in UK</li>
-          <li>Large online progressive slots</li>
+          <li *ngFor="let item of dealer.whyPlay">{{ item }}</li>
         </ul>
       </div>
       <div class="right-desc">
         <p>
-          <img class="title-hidden" src="./assets/icons/giftblue.svg" alt=""> Bonus Details
+          <img class="title-hidden" src="./assets/icons/giftblue.svg" alt="" />
+          Bonus Details
         </p>
         <ul>
-          <li>Maximum First Deposit Bonus: up to $50</li>
-          <li>Bonus Match: 200% match on first deposit</li>
-          <li>Minimum Deposit Amount: $20</li>
-          <li>Wager Requirement: 25 Times</li>
+          <li>Maximum First Deposit Bonus: up to {{ dealer.maxDeposit }}</li>
+          <li>Bonus Match: {{ dealer.match }} match on first deposit</li>
+          <li>Minimum Deposit Amount: {{ dealer.minDeposit }}</li>
+          <li>Wager Requirement: {{ dealer.wagerReq }} Times</li>
           <li>Bonus Excluded in Wager Requirement: No</li>
-          <li>No Deposit Bonus: +$20 Free Spins</li>
+          <li>No Deposit Bonus: {{ dealer.noDeposit }} Free Spins</li>
         </ul>
       </div>
     </div>
   </mat-card-content>
 </mat-card>
-
- <!-- pagination -->
-    <div class="btn-shows">Show 18 more</div>
-    <div class="pagination">
-      <div class="pagination__pagesize">
-        <div class="page-number" [class.active]="activePage === 1" (click)="goToPage(1)">1</div>
-        <div class="page-number" [class.active]="activePage === 2" (click)="goToPage(2)">2</div>
-        <div class="page-number" [class.active]="activePage === 3" (click)="goToPage(3)">3</div>
-        <div class="page-number" [class.active]="activePage === 4" (click)="goToPage(4)">4</div>
-        <div class="page-number" [class.active]="activePage === 5" (click)="goToPage(5)">5</div>
-        <div class="page-number">...</div>
-        <div class="page-number" [class.active]="activePage === 124" (click)="goToPage(124)">124</div>
-        <div class="page-number" (click)="nextPage()">
-          <i class="fa-solid fa-chevron-right"></i>
+<div *ngIf="pagedDealers.length === 0">
+  <div class="no-data-message">No Data</div>
+</div>
+<router-outlet></router-outlet>
+<!-- Modal -->
+<ng-template #reviewModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Review Casino</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      data-dismiss="modal"
+      (click)="modal.dismiss()"
+    ></button>
+  </div>
+  <div class="modal-body modal-data">
+    <form [formGroup]="reviewForm" (ngSubmit)="onSubmitReview()">
+      <div class="form-group">
+        <label>Logo</label>
+        <input formControlName="logo" type="url"  class="form-control mt-1"  />
+        <div *ngIf="reviewForm.get('logo')!.touched && reviewForm.get('logo')!.errors?.['required']" class="error-message">
+          Logo is required and url
         </div>
       </div>
-
-        <div class="pagination__page-index">
-          <p>Showing results {{startIndex}} - {{endIndex}} of {{totalResults}}</p>
-        </div>
-        <div class="pagination__btn">
-          <button id="button-pre" class="pagination__btn--pre btn-pagination" [class.active]="activeButton === 'button-pre'" (click)="previousPage()">
-            <i class="fa-solid fa-chevron-left"></i> Previous
-          </button>
-          <button id="button-next" class="pagination__btn--next btn-pagination" [class.active]="activeButton === 'button-next'" (click)="nextPage()">
-            Next <i class="fa-solid fa-chevron-right"></i>
-          </button>
+      <div class="form-group mt-2">
+        <label>Stt</label>
+        <input formControlName="stt" type="number"  class="form-control mt-1"/>
+        <div *ngIf="reviewForm.get('stt')!.touched && reviewForm.get('stt')!.errors?.['required']" class="error-message">
+          Stt is required and type number
         </div>
       </div>
-
-      <app-desc></app-desc>
-
-      <div class="more">
-        <button id="moreBtn">
-          More <i class="fa-solid fa-chevron-down"></i>
-        </button>
-      </div>
-
-      <!-- Filter Mobile-->
-      <div class="filter-mobile">
-        <div class="filter-mobile__item">
-          <img  src="./assets/icons/filter-mobile.svg" alt="icon" />
-          <p>Filter (2)</p>
-        </div>
-        <div class="filter-mobile__seperate">|</div>
-        <div class="filter-mobile__item">
-          <img src="./assets/icons/sort-mobile.svg" alt="icon" />
-          <p>Sort</p>
+      <div class="form-group mt-2">
+        <label>Name</label>
+        <input formControlName="name"  class="form-control mt-1" required [ngClass]="{'error-input': reviewForm.get('name')!.touched && reviewForm.get('name')!.errors}"/>
+        <div *ngIf="reviewForm.get('name')!.touched && reviewForm.get('name')!.errors?.['required']" class="error-message">
+          Name is required and minimum 4 characters
         </div>
       </div>
+      <div class="form-group mt-2">
+        <label>Color</label>
+        <input formControlName="color"  class="form-control mt-1" />
+        <div *ngIf="reviewForm.get('color')!.touched && reviewForm.get('color')!.errors?.['required']" class="error-message">
+          Color is required to enter the color code
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <label for="Evaluate">Evaluate</label>
+        <input
+          formControlName="Evaluate"
+          id="Evaluate"
+          class="form-control mt-1"
+        />
+        <div *ngIf="reviewForm.get('Evaluate')!.touched && reviewForm.get('Evaluate')!.errors?.['required']" class="error-message">
+          Evaluate is required
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <label for="exclusive">Exclusive Bonus</label>
+        <input
+          formControlName="exclusive"
+          id="exclusive"
+          class="form-control mt-1"
+        />
+        <div *ngIf="reviewForm.get('exclusive')!.touched && reviewForm.get('exclusive')!.errors?.['required']" class="error-message">
+          Evaluate is required
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <label >Why Play</label>
+        <div formArrayName="whyPlay">
+          <div
+            *ngFor="let reason of getWhyPlayControls(); let i = index"
+            class="mt-1"
+          >
+            <input [formControlName]="i" class="form-control mt-1" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group mt-2">
+        <label>Bonus</label>
+        <div formGroupName="bonus">
+          <input
+            formControlName="maxDeposit"
+            id="maxDeposit"
+            class="form-control mt-1"
+          />
+          <input formControlName="match" id="match" class="form-control mt-1" />
+          <input
+            formControlName="minDeposit"
+            id="minDeposit"
+            class="form-control mt-1"
+          />
+          <input
+            formControlName="wagerReq"
+            id="wagerReq"
+            class="form-control mt-1"
+          />
+          <input
+            formControlName="excludeBonus"
+            id="excludeBonus"
+            class="form-control mt-1"
+          />
+          <input
+            formControlName="noDeposit"
+            id="noDeposit"
+            class="form-control mt-1"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary" (click)="onSubmitReview()">
+      Submit
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">
+      Close
+    </button>
+  </div>
+</ng-template>
 
+<!-- pagination -->
+<div class="btn-shows" (click)="showMoreDealers()" *ngIf="totalDealers > 4">
+  {{
+  showAllDealers
+    ? "Show " + (totalDealers - 4) + " less "
+    : "Show " + (totalDealers - 4) + " more"
+  }}
+</div>
+
+
+<div class="pagination">
+  <div aria-label="Page navigation" class="navigation__page">
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a
+          class="page-link"
+          (click)="onPageChange(currentPage - 1)"
+          aria-label="Previous"
+        >
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li
+        class="page-item"
+        [class.active]="currentPage === page"
+        *ngFor="let page of getPageNumbers()"
+      >
+        <a class="page-link" (click)="onPageChange(page)">{{ page }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === getTotalPages()">
+        <a
+          class="page-link"
+          (click)="onPageChange(currentPage + 1)"
+          aria-label="Next"
+        >
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pagination__page-index">
+    <p>
+      Showing results {{ getFirstResultIndex() }} -
+      {{ getLastResultIndex() }} of {{ totalDealers }}
+    </p>
+  </div>
+  <div class="pagination__btn">
+    <button
+      id="button-pre"
+      class="pagination__btn--pre btn-pagination"
+      [class.active]="currentPage === 1"
+      (click)="previousPage()"
+    >
+      <i class="fa-solid fa-chevron-left"></i> Previous
+    </button>
+    <button
+      id="button-next"
+      class="pagination__btn--next btn-pagination"
+      [class.active]="currentPage === getTotalPages()"
+      (click)="nextPage()"
+    >
+      Next <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</div>
+
+<app-desc></app-desc>
+
+<div class="more">
+  <button id="moreBtn">More <i class="fa-solid fa-chevron-down"></i></button>
+</div>
+
+<!-- Filter Mobile-->
+<div class="filter-mobile">
+  <div class="filter-mobile__item">
+    <img src="./assets/icons/filter-mobile.svg" alt="icon" />
+    <p>Filter (2)</p>
+  </div>
+  <div class="filter-mobile__seperate">|</div>
+  <div class="filter-mobile__item">
+    <img src="./assets/icons/sort-mobile.svg" alt="icon" />
+    <p>Sort</p>
+  </div>
+</div>

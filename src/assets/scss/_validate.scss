@@ -1,0 +1,25 @@
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+.error-input {
+  border: 1px solid red;
+}
+
+.error-snackbar {
+  background-color: red;
+  color: white;
+}
+
+.success-snackbar {
+  background-color: green !important;
+  color: black;
+}
+.no-data-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+}
+

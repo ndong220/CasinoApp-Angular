@@ -1,7 +1,7 @@
 <mat-tab-group>
   <mat-tab class="tab-item" *ngFor="let item of items; let i = index" [label]="item.title">
     <div class="tab__show" [ngClass]="{'fadeout': !item.expanded && item.content.length > 200, 'show-less': !item.expanded}" *ngIf="item.content.length > 45">
-      {{ item.content }}
+      test :{{ item.content }}
     </div>
     <div class="tab__show" *ngIf="item.content.length <= 45">
       {{ item.content }}

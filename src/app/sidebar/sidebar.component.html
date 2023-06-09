@@ -20,7 +20,7 @@
           [class.show]="isSubMenuOpen[i]"
         >
           <li *ngFor="let subMenuItem of menuItem.subMenuItems">
-            <a href="{{ subMenuItem.link }}">{{ subMenuItem.label }}</a>
+            <a [routerLink]="[subMenuItem.link]">{{ subMenuItem.label }}</a>
           </li>
         </ul>
       </li>

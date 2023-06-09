@@ -1,3 +1,19 @@
+$mdc-tab-font-family: 'Oswald';
+$mdc-tab-background-color: #fff;
+$mdc-tab-padding: 16px 20px 11px 20px;
+$mdc-tab-margin-right: 10px;
+$mdc-tab-font-weight: 700;
+$mdc-tab-font-size: 17px;
+$mdc-tab-text-align: center;
+$mdc-tab-color: #111111;
+$mdc-tab-border-radius: 6px 6px 0 0;
+$mdc-tab-border-bottom: 5px solid transparent;
+$mdc-tab-cursor: pointer;
+$mdc-tab-transition: all 0.5s ease;
+$mdc-tab-active-background-color: #1E60E1;
+$mdc-tab-active-border-bottom-color: #1E60E1;
+$mdc-tab-active-label-color: #ffffff;
+$mdc-tab-list-border-bottom-color: #1E60E1;
 // compoent
 :host {
   display: flex;
@@ -11,4 +27,78 @@ mat-drawer {
 mat-drawer-container {
   height: 100%;
   background-color: #e5e5ee !important;
+}
+
+// tab
+$mdc-tab-font-family: 'Oswald';
+$mdc-tab-background-color: #fff;
+$mdc-tab-padding: 16px 20px 11px 20px;
+$mdc-tab-margin-right: 10px;
+$mdc-tab-font-weight: 700;
+$mdc-tab-font-size: 17px;
+$mdc-tab-text-align: center;
+$mdc-tab-color: #111111;
+$mdc-tab-border-radius: 6px 6px 0 0;
+$mdc-tab-border-bottom: 5px solid transparent;
+$mdc-tab-cursor: pointer;
+$mdc-tab-transition: all 0.5s ease;
+$mdc-tab-active-background-color: #1E60E1;
+$mdc-tab-active-border-bottom-color: #1E60E1;
+$mdc-tab-active-label-color: #ffffff;
+$mdc-tab-list-border-bottom-color: #1E60E1;
+
+.mdc-tab {
+  font-family: $mdc-tab-font-family;
+  background-color: $mdc-tab-background-color;
+  padding: $mdc-tab-padding;
+  margin-right: $mdc-tab-margin-right;
+  font-weight: $mdc-tab-font-weight;
+  font-size: $mdc-tab-font-size;
+  text-align: $mdc-tab-text-align;
+  color: $mdc-tab-color;
+  border-radius: $mdc-tab-border-radius;
+  border-bottom: $mdc-tab-border-bottom;
+  cursor: $mdc-tab-cursor;
+  transition: $mdc-tab-transition;
+
+  &.mdc-tab--active {
+    background-color: $mdc-tab-active-background-color;
+    border-bottom-color: $mdc-tab-active-border-bottom-color;
+    .mdc-tab__text-label {
+      color: $mdc-tab-active-label-color !important;
+    }
+  }
+}
+
+.mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs > .mat-mdc-tab-header .mat-mdc-tab {
+  flex-grow: 0 !important;
+}
+
+
+.mat-mdc-tab-labels {
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.mat-mdc-tab-body-content {
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow-y: hidden !important;
+}
+
+.mat-mdc-tab-list {
+  border-bottom: 3px solid $mdc-tab-list-border-bottom-color;
+}
+
+.mat-mdc-tab .mdc-tab__text-label, .mat-mdc-tab-link .mdc-tab__text-label {
+  color: $mdc-tab-color;
+}
+.error-snackbar {
+  background-color: red;
+  color: white;
+}
+
+.success-snackbar {
+  background-color: green !important;
+  color: black;
 }

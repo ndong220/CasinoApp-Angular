@@ -1,0 +1,60 @@
+mat-card {
+  margin-left: 50px;
+  margin-right: 50px;
+  h1 {
+    text-align: center;
+    padding: 12px;
+  }
+  .mdc-dialog__title-detail {
+    color: #193387;
+  }
+}
+
+.dealer-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dealer-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.exclusive-label,
+.bonus-label,
+.why-play-label {
+  font-size: 20px;
+  margin: 0;
+}
+
+.exclusive-value,
+.bonus-list,
+.why-play-list {
+  margin-top: 10px;
+}
+
+.bonus-list li {
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  mat-card {
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+}
+@media  only screen and (max-width: 739px) {
+  mat-card {
+    margin-left: 12px;
+    margin-right: 12px;
+ }
+}
+
